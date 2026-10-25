@@ -7,10 +7,10 @@
 /* ---------- 1. PENGATURAN USAHA (mudah diganti) ---------- */
 const CONFIG = {
   brandName: "Dapur Moms",                 // nama usaha
-  whatsappNumber: "6259191551086",         // GANTI: format internasional tanpa +, 0, atau spasi. Contoh: 6281234567890
+  whatsappNumber: "62859191551086",         // GANTI: format internasional tanpa +, 0, atau spasi. Contoh: 6281234567890
   address: "bukit kemunin,lampung utara",     // GANTI dengan alamat usaha Anda
   hours: "Senen-sabtu, 7.00 – 17.00 WIB",// GANTI jam operasional
-  instagramUrl: "https://instagram.com/",  // GANTI dengan link Instagram Anda
+  instagramUrl: "https://www.instagram.com/dapurmoms_23?obrf=MXYzaW0yM3V3OTJjYg==/",  // GANTI dengan link Instagram Anda
   instagramHandle: "@dapurmoms_23 ",      // GANTI nama akun Instagram
   currency: "Rp",
   storageKey: "dapur-moms-cart"            // kunci penyimpanan keranjang di browser
