@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dapur Moms – Jajanan Kekinian Enak & Terjangkau</title>
+  <meta name="description" content="Dapur Moms menyediakan makanan dan jajanan kekinian dengan rasa lezat dan harga terjangkau. Pesan mudah lewat WhatsApp." />
+  <meta name="theme-color" content="#d62828" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#menu">Lewati ke menu</a>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#beranda" class="logo" aria-label="Dapur Moms – ke beranda">
+        <img class="logo-img" src="images/logo.png" alt="" width="44" height="44" data-name="Dapur Moms" data-emoji="🍗" />
+        <span class="logo-text" data-brand>Dapur Moms</span>
+      </a>
+      <nav id="nav-menu" class="nav-menu" aria-label="Navigasi utama">
+        <a href="#beranda">Beranda</a>
+        <a href="#menu">Menu</a>
+        <a href="#tentang">Tentang Kami</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="cart-btn" id="open-cart" aria-label="Buka keranjang">
+          🛒 <span class="cart-count" id="cart-count">0</span>
+        </button>
+        <button class="burger" id="burger" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="nav-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="beranda">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <span class="chip">🔥 Jajanan Kekinian</span>
+          <h1>Lagi Lapar? Saatnya <em>Jajan Enak!</em></h1>
+          <p>
+            <span data-brand>Dapur Moms</span> menyediakan berbagai makanan kekinian dengan
+            rasa lezat dan harga terjangkau. Dari ayam geprek pedas sampai camilan renyah,
+            semua siap menemani harimu.
+          </p>
+          <div class="hero-buttons">
+            <a href="#menu" class="btn btn-primary">Lihat Menu</a>
+            <a href="#menu" class="btn btn-outline" id="hero-order">Pesan Sekarang</a>
+          </div>
+          <ul class="hero-points">
+            <li>✔ Rasa juara</li>
+            <li>✔ Harga ramah kantong</li>
+            <li>✔ Pesan via WhatsApp</li>
+          </ul>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-blob" aria-hidden="true"></div>
+          <img id="hero-img" src="images/ayam-geprek.jpg" alt="Ayam Geprek andalan Dapur Moms" data-name="Ayam Geprek" data-emoji="🍗" />
+          <div class="float-badge fb1">🌶️ Pedas Nampol</div>
+          <div class="float-badge fb2">⭐ Best Seller</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAVORIT ===== -->
+    <section class="section section-cream" id="favorit">
+      <div class="container">
+        <div class="section-head">
+          <span class="chip">⭐ Pilihan Terbaik</span>
+          <h2>Menu Favorit Pelanggan</h2>
+          <p>Paling sering dipesan dan paling bikin kangen.</p>
+        </div>
+        <div class="fav-grid" id="fav-grid"></div>
+      </div>
+    </section>
+
+    <!-- ===== KENAPA KAMI ===== -->
+    <section class="section" id="alasan">
+      <div class="container">
+        <div class="section-head">
+          <span class="chip">💛 Kenapa Kami?</span>
+          <h2>Alasan Pelanggan Memilih Kami</h2>
+        </div>
+        <div class="reasons">
+          <article class="reason"><div class="reason-ico">😋</div><h3>Rasa Lezat</h3><p>Bumbu dan sambal diracik dengan resep yang pas di lidah.</p></article>
+          <article class="reason"><div class="reason-ico">💸</div><h3>Harga Terjangkau</h3><p>Porsi puas, harga tetap bersahabat untuk semua kalangan.</p></article>
+          <article class="reason"><div class="reason-ico">🍳</div><h3>Selalu Fresh</h3><p>Dimasak saat dipesan supaya tetap hangat dan renyah.</p></article>
+          <article class="reason"><div class="reason-ico">🤝</div><h3>Pelayanan Ramah</h3><p>Pesan mudah lewat WhatsApp, dilayani dengan senyum.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MENU ===== -->
+    <section class="section section-cream" id="menu">
+      <div class="container">
+        <div class="section-head">
+          <span class="chip">🍽️ Daftar Menu</span>
+          <h2>Pilih Jajananmu</h2>
+          <p>Harga yang tampil adalah <strong>harga contoh</strong> dan dapat diubah oleh pemilik usaha.</p>
+        </div>
+
+        <div class="toolbar">
+          <label class="search" for="search">
+            <span aria-hidden="true">🔍</span>
+            <input type="search" id="search" placeholder="Cari menu, misal: geprek" autocomplete="off" />
+          </label>
+          <div class="filters" id="filters" role="group" aria-label="Kategori menu"></div>
+        </div>
+
+        <div class="menu-grid" id="menu-grid" aria-live="polite"></div>
+        <p class="empty" id="empty" hidden>Menu tidak ditemukan. Coba kata kunci atau kategori lain.</p>
+      </div>
+    </section>
+
+    <!-- ===== TENTANG ===== -->
+    <section class="section" id="tentang">
+      <div class="container about">
+        <div class="about-img">
+          <div class="about-card">
+            <span class="about-emoji" aria-hidden="true">👩‍🍳</span>
+            <strong data-brand>Dapur Moms</strong>
+            <small>UMKM Kuliner Kekinian</small>
+          </div>
+        </div>
+        <div class="about-text">
+          <span class="chip">👋 Tentang Kami</span>
+          <h2>Dapur Rumahan, Rasa Juara</h2>
+          <p>
+            <span data-brand>Dapur Moms</span> adalah UMKM kuliner yang menyediakan berbagai
+            makanan berat dan camilan kekinian dengan rasa lezat, pilihan menu beragam, serta
+            pelayanan yang ramah.
+          </p>
+          <p>Kami percaya makanan enak tidak harus mahal. Setiap menu dibuat dengan bahan pilihan dan penuh perhatian.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== KONTAK ===== -->
+    <section class="section section-cream" id="kontak">
+      <div class="container">
+        <div class="section-head">
+          <span class="chip">📞 Kontak</span>
+          <h2>Hubungi & Pesan</h2>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card"><div class="c-ico">💬</div><h3>WhatsApp</h3><p id="c-wa">-</p></div>
+          <div class="contact-card"><div class="c-ico">📍</div><h3>Alamat</h3><p id="c-address">-</p></div>
+          <div class="contact-card"><div class="c-ico">🕒</div><h3>Jam Operasional</h3><p id="c-hours">-</p></div>
+          <div class="contact-card"><div class="c-ico">📸</div><h3>Instagram</h3><p><a id="c-ig" href="#" target="_blank" rel="noopener">-</a></p></div>
+        </div>
+        <div class="center"><a id="c-wa-btn" class="btn btn-primary btn-lg" href="#" target="_blank" rel="noopener">Pesan via WhatsApp</a></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <strong class="footer-brand" data-brand>Dapur Moms</strong>
+        <p>UMKM kuliner makanan &amp; jajanan kekinian. Lezat, terjangkau, dan dibuat dengan sepenuh hati.</p>
+      </div>
+      <p class="copy">© <span id="year"></span> <span data-brand>Dapur Moms</span>. Semua hak dilindungi.</p>
+    </div>
+  </footer>
+
+  <!-- ===== KERANJANG (DRAWER) ===== -->
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" aria-hidden="true">
+    <div class="drawer-head">
+      <h2 id="drawer-title">🛒 Keranjang Saya</h2>
+      <button class="icon-btn" id="close-cart" aria-label="Tutup keranjang">✕</button>
+    </div>
+    <div class="drawer-body">
+      <div id="cart-items" class="cart-items"></div>
+      <p class="empty" id="cart-empty">Keranjang masih kosong. Yuk pilih menu dulu!</p>
+
+      <form id="order-form" class="order-form" novalidate>
+        <h3>Data Pemesan</h3>
+        <label>Nama pelanggan
+          <input type="text" id="cust-name" placeholder="Nama kamu" required autocomplete="name" />
+        </label>
+        <label>Alamat pengiriman
+          <textarea id="cust-address" rows="2" placeholder="Alamat lengkap" required autocomplete="street-address"></textarea>
+        </label>
+        <label>Catatan pesanan (opsional)
+          <textarea id="cust-note" rows="2" placeholder="Contoh: level pedas sedang"></textarea>
+        </label>
+        <p class="form-error" id="form-error" role="alert" hidden></p>
+      </form>
+    </div>
+    <div class="drawer-foot">
+      <div class="total-row"><span>Total Belanja</span><strong id="cart-total">Rp 0</strong></div>
+      <button class="btn btn-wa btn-block" id="send-wa" type="button">Pesan via WhatsApp</button>
+      <button class="link-btn" id="clear-cart" type="button">Kosongkan keranjang</button>
+    </div>
+  </aside>
+
+  <!-- Floating -->
+  <button class="fab-cart" id="fab-cart" aria-label="Lihat keranjang">🛒 <span id="fab-count">0</span> • <span id="fab-total">Rp 0</span></button>
+  <button class="to-top" id="to-top" aria-label="Kembali ke atas" hidden>↑</button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
